@@ -1,9 +1,9 @@
-import { ThemeProvider } from 'styled-components/native';
+import { useEffect } from 'react';
+
 import { SplashScreen, Stack } from 'expo-router';
 import { useFonts } from 'expo-font';
 
-import { theme } from '@/constants';
-import { useEffect } from 'react';
+import { Provider } from '@/components';
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
@@ -25,10 +25,12 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
+    <Provider>
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="index" />
+        <Stack.Screen name="criar-conta" />
+        <Stack.Screen name="login" />
       </Stack>
-    </ThemeProvider>
+    </Provider>
   );
 }
