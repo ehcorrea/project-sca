@@ -12,7 +12,20 @@
           "package_name": "com.zctechs.project.sca"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "713912579571-n5r8pdp0dao503eumtfle3bk6839srsn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zctechs.project.sca",
+            "certificate_hash": "28d9776c8e41da57969de67ac15f8aae8344e0dd"
+          }
+        },
+        {
+          "client_id": "713912579571-tev04mmfetsi1e3etbrh36g4qc5bad12.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCdoSyEBNR7ZBY31lgufcUwqprQlZsOm8g"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713912579571-tev04mmfetsi1e3etbrh36g4qc5bad12.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "713912579571-qe1dbtnrqfakllv8bip98lcbc1o1759l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zctechs.project.sca"
+              }
+            }
+          ]
         }
       }
     }
