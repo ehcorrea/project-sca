@@ -9,7 +9,8 @@ import { setHeaderAuthorization } from '@/services/client';
 import { useMutation } from '../useMutation/useMutation';
 
 GoogleSignin.configure({
-  webClientId: process.env.EXPO_PUBLIC_WEB_CLIENT_ID,
+  webClientId:
+    '713912579571-tev04mmfetsi1e3etbrh36g4qc5bad12.apps.googleusercontent.com',
 });
 
 export function useLogin() {
@@ -24,7 +25,9 @@ function useLoginGoogle() {
 
   const login = async () => {
     await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+
     const { data: googleResponse } = await GoogleSignin.signIn();
+
     if (googleResponse) {
       const credentials = firebaseAuth.GoogleAuthProvider.credential(
         googleResponse?.idToken || null

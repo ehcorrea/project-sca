@@ -5,8 +5,11 @@ import { router } from 'expo-router';
 import { Button, Line, Spancing } from '@/components';
 
 import * as S from './InicioScreen.styles';
+import { useLogin } from '@/hooks/useLogin/useLogin';
 
 export function InicioScreen() {
+  const { loginGoogle } = useLogin();
+
   const handleCriarContaScreen = () => {
     router.push('/criar-conta');
   };
@@ -44,7 +47,7 @@ export function InicioScreen() {
             <View className="flex-row">
               <Button.Account />
               <Spancing x={10} />
-              <Button.Account variant="google" />
+              <Button.Account variant="google" onPress={loginGoogle} />
             </View>
             <Spancing y={10} />
             <S.ButtonLogin onPress={handleEntrarComEmail}>

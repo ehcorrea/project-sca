@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "713912579571-n5r8pdp0dao503eumtfle3bk6839srsn.apps.googleusercontent.com",
+          "client_id": "713912579571-43aq7asf7p74r53bak0u9qvqj5qspdnp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.zctechs.project.sca",
-            "certificate_hash": "28d9776c8e41da57969de67ac15f8aae8344e0dd"
+            "certificate_hash": "1729dc936ea443a00bfc599bbddf83a70129bc63"
           }
         },
         {

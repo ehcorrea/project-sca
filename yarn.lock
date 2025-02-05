@@ -7251,7 +7251,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-dev-client@npm:~4.0.23":
+"expo-dev-client@npm:~4.0.29":
   version: 4.0.29
   resolution: "expo-dev-client@npm:4.0.29"
   dependencies:
@@ -12531,7 +12531,7 @@ __metadata:
     expo: ~51.0.28
     expo-build-properties: ~0.12.5
     expo-constants: ~16.0.2
-    expo-dev-client: ~4.0.23
+    expo-dev-client: ~4.0.29
     expo-font: ^13.0.3
     expo-image: ~1.13.0
     expo-linear-gradient: ^14.0.2
