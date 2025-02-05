@@ -3,9 +3,9 @@ import { ImageBackground } from 'expo-image';
 import { router } from 'expo-router';
 
 import { Button, Line, Spancing } from '@/components';
+import { useLogin } from '@/hooks';
 
 import * as S from './InicioScreen.styles';
-import { useLogin } from '@/hooks/useLogin/useLogin';
 
 export function InicioScreen() {
   const { loginGoogle } = useLogin();

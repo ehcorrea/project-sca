@@ -9,8 +9,7 @@ import { setHeaderAuthorization } from '@/services/client';
 import { useMutation } from '../useMutation/useMutation';
 
 GoogleSignin.configure({
-  webClientId:
-    '713912579571-tev04mmfetsi1e3etbrh36g4qc5bad12.apps.googleusercontent.com',
+  webClientId: process.env.EXPO_PUBLIC_WEB_CLIENT_ID,
 });
 
 export function useLogin() {
@@ -26,22 +25,22 @@ function useLoginGoogle() {
   const login = async () => {
     await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
 
-    const { data: googleResponse } = await GoogleSignin.signIn();
+    const { data: googleResponseData } = await GoogleSignin.signIn();
 
-    if (googleResponse) {
+    if (googleResponseData) {
       const credentials = firebaseAuth.GoogleAuthProvider.credential(
-        googleResponse?.idToken || null
+        googleResponseData.idToken
       );
       const firebaseResponse =
         await firebaseAuth().signInWithCredential(credentials);
-      setGoogleResponse(googleResponse);
+      setGoogleResponse(googleResponseData);
       clearAuth();
       mutate({
         idToken: await firebaseResponse.user.getIdToken(),
         profileMetaData: {
-          firstName: googleResponse.user.givenName,
-          lastName: googleResponse.user.familyName,
-          email: googleResponse.user.email,
+          firstName: googleResponseData.user.givenName,
+          lastName: googleResponseData.user.familyName,
+          email: googleResponseData.user.email,
           phoneNumber: firebaseResponse.user.phoneNumber,
         },
       });

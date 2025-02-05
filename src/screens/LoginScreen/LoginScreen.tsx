@@ -1,10 +1,13 @@
 import { ScrollView, View } from 'react-native';
 
 import { Button, Input, Line, Spancing, Text } from '@/components';
+import { useLogin } from '@/hooks';
 
 import * as S from './LoginScreen.styles';
 
 export function LoginScreen() {
+  const { loginGoogle } = useLogin();
+
   return (
     <>
       <S.Header>
@@ -46,7 +49,7 @@ export function LoginScreen() {
         <View className="flex-row">
           <Button.Account />
           <Spancing x={10} />
-          <Button.Account variant="google" />
+          <Button.Account variant="google" onPress={loginGoogle} />
         </View>
       </ScrollView>
     </>

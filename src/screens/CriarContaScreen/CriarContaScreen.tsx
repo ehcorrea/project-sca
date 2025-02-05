@@ -1,10 +1,13 @@
 import { ScrollView, View } from 'react-native';
 
 import { Spancing, Text, Input, Button, Line } from '@/components';
+import { useLogin } from '@/hooks';
 
 import * as S from './CriarContaScreen.styles';
 
 export function CriarContaScreen() {
+  const { loginGoogle } = useLogin();
+
   return (
     <>
       <S.Header>
@@ -44,7 +47,7 @@ export function CriarContaScreen() {
         <View className="flex-row">
           <Button.Account />
           <Spancing x={10} />
-          <Button.Account variant="google" />
+          <Button.Account variant="google" onPress={loginGoogle} />
         </View>
       </ScrollView>
     </>
