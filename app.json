@@ -14,14 +14,16 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.zctechs.project.sca"
+      "bundleIdentifier": "com.zctechs.project.sca",
+      "googleServicesFile": "./google/GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.zctechs.project.sca"
+      "package": "com.zctechs.project.sca",
+      "googleServicesFile": "./google/google-services.json"
     },
     "web": {
       "bundler": "metro",
@@ -30,10 +32,31 @@
     },
     "plugins": [
       "expo-router",
-      "expo-font"
+      "expo-font",
+      "@react-native-google-signin/google-signin",
+      "expo-build-properties",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "282d7482-caea-43eb-a359-ae650852ee8a"
+      }
     }
   }
 }
