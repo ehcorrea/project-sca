@@ -1,5 +1,7 @@
 export * from './Button/Button';
+export * from './HeaderUser/HeaderUser';
 export * from './Input/Input';
+export * from './Layout/Layout';
 export * from './Line/Line';
 export * from './Provider/Provider';
 export * from './Spacing/Spacing';
