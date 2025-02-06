@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { GoogleSignin, User } from '@react-native-google-signin/google-signin';
 import firebaseAuth from '@react-native-firebase/auth';
+import { router } from 'expo-router';
 
 import { authFirebase } from '@/services/api';
 import { authStore } from '@/stores/authStore';
@@ -60,6 +61,7 @@ function useLoginGoogle() {
             foto: googleResponse.user.photo,
           },
         });
+        router.replace('/home');
       }
     };
     handleStoreAuth();
