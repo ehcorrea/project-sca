@@ -1,10 +1,19 @@
-import { Text } from '@/components';
-import { View } from 'react-native';
+import { ScrollView, View } from 'react-native';
+
+import { Spancing, Layout } from '@/components';
+
+import { Banners, SearchBar } from './components';
 
 export function HomeScreen() {
   return (
-    <View>
-      <Text>home</Text>
-    </View>
+    <Layout>
+      <ScrollView className="flex-1">
+        <View className="p-[5%]">
+          <SearchBar />
+          <Spancing y={10} />
+          <Banners />
+        </View>
+      </ScrollView>
+    </Layout>
   );
 }

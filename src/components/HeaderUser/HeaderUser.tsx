@@ -20,7 +20,7 @@ export function HeaderUser() {
             {auth?.user.nome}
           </Text>
           <Text palette="gray" size="medium">
-            Iniciante
+            Account Executive
           </Text>
         </View>
       </View>

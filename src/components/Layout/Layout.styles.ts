@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components/native';
 
 export const Container = styled.View`
   ${({ theme }) => css`
-    background-color: ${theme.colors.default.white.main};
+    background-color: ${theme.colors.default.bg.main};
     flex: 1;
   `}
 `;
