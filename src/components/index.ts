@@ -1,4 +1,6 @@
 export * from './Button/Button';
+export * from './CardSimulation/CardSimulation';
+export * from './CardSquare/CardSquare';
 export * from './HeaderUser/HeaderUser';
 export * from './Input/Input';
 export * from './Layout/Layout';
