@@ -7,16 +7,24 @@ import {
   Text,
   CardSquare,
   CardSimulation,
+  SearchBar,
 } from '@/components';
 
-import { Banners, SearchBar } from './components';
+import { Banners } from './components';
+import * as S from './HomeScreen.styles';
 
 export function HomeScreen() {
   return (
     <Layout>
       <ScrollView className="flex-1">
         <View className="p-[5%]">
-          <SearchBar />
+          <SearchBar
+            button={
+              <S.FilterButton>
+                <S.FilterIcon name="sound-mix" />
+              </S.FilterButton>
+            }
+          />
           <Spancing y={10} />
           <Banners />
           <Spancing y={10} />

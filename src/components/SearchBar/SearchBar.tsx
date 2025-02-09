@@ -1,11 +1,14 @@
 import { TextInput, View } from 'react-native';
 import { useRef } from 'react';
 
-import { Spancing } from '@/components';
-
 import * as S from './SearchBar.styles';
+import { Spancing } from '../Spacing/Spacing';
 
-export function SearchBar() {
+export type SearchBarProps = {
+  button?: React.ReactNode;
+};
+
+export function SearchBar({ button }: SearchBarProps) {
   const inputRef = useRef<TextInput>(null);
 
   const handleFocus = () => {
@@ -21,11 +24,7 @@ export function SearchBar() {
           <S.SearchInput ref={inputRef} />
         </View>
       </S.Container>
-      <View className="w-[15%] items-end">
-        <S.FilterButton>
-          <S.FilterIcon name="sound-mix" />
-        </S.FilterButton>
-      </View>
+      <View className="w-[15%] items-end">{button}</View>
     </View>
   );
 }

@@ -1,6 +1,6 @@
 import { TouchableOpacity } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import { AntDesign, Entypo } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
 export const Container = styled(TouchableOpacity)`
   ${({ theme }) => css`
@@ -25,22 +25,5 @@ export const SearchInput = styled.TextInput.attrs(({ theme }) => ({
   ${({ theme }) => css`
     flex: 1%;
     font-size: ${theme.font.size.medium}px;
-  `}
-`;
-
-export const FilterIcon = styled(Entypo).attrs(({ theme }) => ({
-  color: theme.colors.default.white.main,
-  size: theme.rfvalue(28),
-}))``;
-
-export const FilterButton = styled(TouchableOpacity)`
-  ${({ theme }) => css`
-    align-items: center;
-    background-color: ${theme.colors.default.primary.main};
-    border-radius: 14px;
-    height: 48px;
-    justify-content: center;
-    transform: rotate(90deg);
-    width: 48px;
   `}
 `;

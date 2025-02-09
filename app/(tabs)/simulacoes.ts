@@ -1,3 +1,3 @@
-import { HomeScreen } from '@/screens';
+import { SimulacoesListaScreen } from '@/screens';
 
-export default HomeScreen;
+export default SimulacoesListaScreen;
