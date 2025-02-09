@@ -15,7 +15,6 @@ export default function TabLayout() {
         <Tabs.Screen name="home" />
         <Tabs.Screen name="simulacoes" />
         <Tabs.Screen name="dashboard" />
-        <Tabs.Screen name="perfil" />
       </Tabs>
     </View>
   );
